@@ -1,0 +1,36 @@
+
+#include <iostream>
+using namespace std;
+class DelivaryTimeEstimator{
+    public:
+    void estimateTime(int distanceInKm){
+        double time;
+        time=(distanceInKm/10)+1;
+        cout<<time<<" hours"<<endl;
+
+    };
+    void estimateTime(string cityName){
+        string Cairo,Alex;
+        if(cityName == "Cairo"){
+            cout<<"2 hours"<<endl;
+        }
+        else if(cityName == "Alex"){
+            cout<<"3 hours"<<endl;
+        }
+        else{
+            cout<<"5 hours"<<endl;
+        }
+    };
+
+};
+
+
+int main() {
+    DelivaryTimeEstimator d1;
+    d1.estimateTime("Cairo");
+    d1.estimateTime(50);
+
+
+
+    return 0;
+}
