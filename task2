@@ -1,0 +1,47 @@
+
+#include <iostream>
+using namespace std;
+class Delivary{
+    public:
+    virtual double calculateCost(double wieght){
+        return 0;
+
+    }
+};
+class StandardDelivary:public Delivary{
+    public:
+     double calculateCost(double wieght)override
+    {
+        double cost;
+        return cost=10+wieght*2;
+        
+
+
+    }
+}
+class ExpressDelivary:public Delivary{
+    public:
+    double calculateCost(double wieght) override
+    {
+        double cost;
+        return cost=10+wieght*3;
+        
+
+    }
+}
+
+int main() {
+    Delivary *d;
+    StandardDelivary s;
+    ExpressDelivary e;
+
+    d=&s;
+    cout<<d->calculateCost(5)<<endl;
+    d=&e;
+    cout<<d->calculateCost(5)<<endl;
+
+    
+
+
+    return 0;
+}
